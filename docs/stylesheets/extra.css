@@ -1,0 +1,77 @@
+:root {
+  --md-text-font: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; 
+}
+
+.md-typeset h1 {
+  font-weight: bold;
+}
+
+.procedure {
+  font-weight: bold;
+}
+
+.numberCircle {
+  width: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 15px;
+  border: 0px;
+  background: #AC0C64;
+  color: #fff;
+}
+
+figcaption {
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 0.9em;
+}
+
+.md-typeset a {
+  text-decoration: underline;
+}
+
+.md-typeset img {
+    display: block;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+    max-width: 100%;
+    max-height: 400px;
+}
+
+.stacked-images {
+          display: flex;
+  justify-content: space-around;
+       margin-top: 16px;
+}
+
+.stacked-image {
+  align-self: center;
+  max-height: 400px !important;
+}
+
+img.inline-img {
+  display: inline;
+  height: 1em; 
+  margin-top: 0; 
+  margin-bottom: 0;
+} 
+
+:root {
+  --md-primary-fg-color: #353554;
+}
+
+[data-md-color-scheme="causemos"] {
+  --md-primary-fg-color: #1a1a32;
+  --md-typeset-a-color: blue;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-accent-fg-color: #AFBAFD;
+}
+
+[data-md-color-scheme=slate][data-md-color-primary=indigo] {
+  --md-typeset-a-color: #AFBAFD;
+}
