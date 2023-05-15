@@ -1,0 +1,67 @@
+site_name: Causemos Help
+site_author: Uncharted Software Inc.
+
+copyright: Copyright &copy; 2023 Uncharted Software Inc.
+
+theme:
+  name: material
+  features:
+    - search.suggest
+    - search.highlight
+    - navigation.instant
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.instant
+    - navigation.footer
+    - content.code.copy
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: causemos
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  logo: img/causemos-icon-white.svg
+  favicon: img/favicon.ico
+  font: false
+  custom_dir: overrides
+  language: custom
+
+plugins:
+    search: {}
+    glightbox: {}
+    macros: {}
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/unchartedsoftware
+      name: Uncharted on GitHub
+  product_name: Causemos
+  build: core
+
+markdown_extensions:
+    admonition: {}
+    attr_list: {}
+    md_in_html: {}
+    pymdownx.details: {}
+    pymdownx.superfences: {}
+    pymdownx.keys: {}
+    pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home:
+    - index.md
