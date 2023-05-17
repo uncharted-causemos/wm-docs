@@ -4,9 +4,10 @@ RUN apk update && \
     apk upgrade && \
     apk add --no-cache \
      docker \
+     git \
+     make \
      sudo \
-     vim \
-     make
+     vim
 
 RUN pip install --upgrade pip
 RUN pip install mkdocs

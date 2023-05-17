@@ -27,7 +27,7 @@ build:
 
         "${CI_COMMIT_TAG}") export VERSION_TAG="${CI_COMMIT_TAG}" ;;
 
-        master) export VERSION_TAG="latest" ;;
+        main) export VERSION_TAG="latest" ;;
 
         *) echo "Unknown build ref $CI_COMMIT_REF_NAME in $CI_COMMIT_TAG";
            echo "Defaulting to $CI_COMMIT_REF_NAME";
