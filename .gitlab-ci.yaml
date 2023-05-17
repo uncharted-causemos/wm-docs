@@ -38,16 +38,12 @@ build:
     # Stop build if there is no docker tag version
     - if [ -z "${VERSION_TAG}" ]; then exit 0; fi
 
-    # Create version file
-    - echo '{' > src/version_info.json
-    - echo '  "version":"'${VERSION_TAG}'",' >> src/version_info.json
-    - echo '  "commit":"'${CI_COMMIT_SHA}'",' >> src/version_info.json
-    - echo '  "build":"'${CI_PIPELINE_ID}'"' >> src/version_info.json
-    - echo '}' >> src/version_info.json
-
+    # Display version information
     - echo "--- Building Causemos Documentation ---"
-    - cat src/version_info.json
-    - echo "------------------------"
+    - echo "version:${VERSION_TAG}"
+    - echo "commit:${CI_COMMIT_SHA}"
+    - echo "build:${CI_PIPELINE_ID}"
+    - echo "---------------------------------------"
 
     # Build and push causemos documentation
     - make build
