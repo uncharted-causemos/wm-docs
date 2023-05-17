@@ -1,0 +1,54 @@
+image: docker.uncharted.software/worldmodeler/wm-docs-ci:1.0.0
+
+variables:
+  # need to specify the docker host for dind to access services
+  DOCKER_HOST: tcp://docker:2375
+  # when using dind, overlay2 provides improved performance
+  DOCKER_DRIVER: overlay2
+
+before_script:
+  - cd ${CI_PROJECT_DIR}
+  - pwd
+
+stages:
+  - build
+
+build:
+  stage: build
+  only:
+    - main
+    - tags
+  services:
+    - name: docker-hub.uncharted.software/docker:dind
+      alias: docker
+  script:
+    - >
+      case ${CI_COMMIT_REF_NAME} in
+
+        "${CI_COMMIT_TAG}") export VERSION_TAG="${CI_COMMIT_TAG}" ;;
+
+        master) export VERSION_TAG="latest" ;;
+
+        *) echo "Unknown build ref $CI_COMMIT_REF_NAME in $CI_COMMIT_TAG";
+           echo "Defaulting to $CI_COMMIT_REF_NAME";
+           export VERSION_TAG="$CI_COMMIT_REF_NAME" ;;
+
+      esac
+
+    # Stop build if there is no docker tag version
+    - if [ -z "${VERSION_TAG}" ]; then exit 0; fi
+
+    # Create version file
+    - echo '{' > src/version_info.json
+    - echo '  "version":"'${VERSION_TAG}'",' >> src/version_info.json
+    - echo '  "commit":"'${CI_COMMIT_SHA}'",' >> src/version_info.json
+    - echo '  "build":"'${CI_PIPELINE_ID}'"' >> src/version_info.json
+    - echo '}' >> src/version_info.json
+
+    - echo "--- Building Causemos Documentation ---"
+    - cat src/version_info.json
+    - echo "------------------------"
+
+    # Build and push causemos documentation
+    - make build
+    - VERSION=${VERSION_TAG} docker buildx bake prod --push
