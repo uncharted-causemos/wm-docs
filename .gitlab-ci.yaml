@@ -47,4 +47,4 @@ build:
 
     # Build and push causemos documentation
     - make build
-    - VERSION=${VERSION_TAG} docker buildx bake prod --push
+    - VERSION=${VERSION_TAG} docker buildx bake default --push

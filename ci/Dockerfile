@@ -5,7 +5,8 @@ RUN apk update && \
     apk add --no-cache \
      docker \
      sudo \
-     vim
+     vim \
+     make
 
 RUN pip install --upgrade pip
 RUN pip install mkdocs
