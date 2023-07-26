@@ -1,3 +1,4 @@
+/*Uncharted font-family*/
 :root {
   --md-text-font: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; 
 }
@@ -7,7 +8,9 @@
 }
 
 .procedure {
-  font-weight: bold;
+  font-size: 1.25em;
+  font-weight: 400;
+  letter-spacing: -.01em;
 }
 
 .numberCircle {
@@ -21,9 +24,8 @@
   color: #fff;
 }
 
-figcaption {
-  margin-left: 0;
-  margin-right: 0;
+.md-typeset figcaption {
+  max-width: 85%;
   font-size: 0.9em;
 }
 
@@ -74,4 +76,89 @@ img.inline-img {
 
 [data-md-color-scheme=slate][data-md-color-primary=indigo] {
   --md-typeset-a-color: #AFBAFD;
+}
+
+/*Adjust icon sizes and alignment*/
+
+.md-typeset .emojione svg,.md-typeset .gemoji svg,.md-typeset .twemoji svg {
+    font-size: .75em;
+}
+
+.md-typeset .emojione,.md-typeset .gemoji,.md-typeset .twemoji {
+    height: .75em;
+    vertical-align: baseline;
+}
+
+/*Admonition for procedure lists*/
+
+:root {
+  --md-admonition-icon--list: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.75 5.5h11.5a.75.75 0 0 1 0 1.5H8.75a.75.75 0 0 1 0-1.5Zm0 6h11.5a.75.75 0 0 1 0 1.5H8.75a.75.75 0 0 1 0-1.5Zm0 6h11.5a.75.75 0 0 1 0 1.5H8.75a.75.75 0 0 1 0-1.5ZM5 12a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM4 7a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 12a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/></svg>')
+}
+
+.md-typeset .admonition.list,
+.md-typeset details.list {
+  border-color: #9e9e9e;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.md-typeset .list > .admonition-title,
+.md-typeset .list > summary {
+  background-color: #9e9e9e1a;
+}
+
+.md-typeset .list > .admonition-title::before,
+.md-typeset .list > summary::before {
+  background-color: #9e9e9e;
+  -webkit-mask-image: var(--md-admonition-icon--list);
+          mask-image: var(--md-admonition-icon--list);
+}
+
+/*Improved styling for grid buttons on home page*/
+
+.md-typeset .md-button {
+  color: var(--md-primary-fg-color--light);
+  text-decoration: none;
+}
+
+/*Transform for flipping icons horizontally*/
+
+.flip {
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  }
+
+/*Grid cards for home page*/
+
+.gridcards {
+  text-align: center;
+}
+
+.gridcards p {
+  margin: 0;
+}
+
+.gridcards p a {
+  display: block;
+  margin: 10px auto;
+}
+
+.polarity-same {
+  color: #0071b3;
+  font-weight: bold;
+}
+
+.polarity-opposite {
+  color: #d65d00;
+  font-weight: bold;
+}
+
+.highlighted {
+  color: #514398;
+  background-color: #fcfaff;
+  border: 1px solid hsl(262deg,85%,78%);
+  padding: 0 2px;
 }
