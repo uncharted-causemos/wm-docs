@@ -59,5 +59,5 @@ A project can contain any number of related [data-driven index models](index-gra
 
 ??? list "To create a new analysis"
 
-    1. Click :fontawesome-solid-plus:{ aria-hidden="true"} **Create Index**.
+    1. Click :fontawesome-solid-plus:{ aria-hidden="true"} **Create index model analysis**.
     2. To rename the analysis, click :fontawesome-solid-pencil:{ alt="Options" title="Options" } > :fontawesome-regular-pen-to-square:{ aria-hidden="true"} **Rename** in the nav bar, enter a unique name, and then click **Confirm**.

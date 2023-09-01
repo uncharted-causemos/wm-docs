@@ -73,7 +73,7 @@ nav:
   - Get started: get-started.md
   - Create an analysis project: analysis-projects.md
   - Build an index graph: index-graph.md
-  - Search data cubes: search-datacubes.md
+  - Search datacubes: search-datacubes.md
   - Rank regions: rank-regions.md
   - View projections: projections.md
   - Save and share insights: insights.md
