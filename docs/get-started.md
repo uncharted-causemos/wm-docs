@@ -2,7 +2,7 @@
 title: Get started
 ---
 
-This example shows how to use Causemos to create, build out, and share findings from an analysis project. It assumes you're an analyst trying to determine in which countries your government should focus resources to mitigate the effects of climate-driven events.
+This example shows how to use Causemos to create, build out, and share findings from an analysis project. It assumes you're an analyst trying to decide in which countries your government should focus resources to mitigate the effects of climate-driven events.
 
 ??? note "Available data and documents"
 
@@ -25,7 +25,7 @@ A [project](analysis-projects.md) is your space to capture questions and lines o
 
 ![Define New Project page with fields for entering a name and description](img/get-started/project-create.png)
 
-This example shows how to create a `Climate Support` project that contains a single analysis. A project can, however, contain many analyses used to understand aspects of or scenarios related to the underlying system. 
+This example shows how to create a `Climate Support` project that has a single analysis. A project can, however, contain many analyses used to understand aspects of or scenarios related to the underlying system. 
 
 <p class="procedure">To create a new project</p>
 
@@ -70,19 +70,19 @@ The new analysis starts with an overall priority concept, which in this case rep
   </figcaption>
 </figure>
 
-Next, you'll associate these concepts with their own supporting and refuting child concepts with a set of drivers backed by index models. To help you quickly find drivers and data, Causemos will use LLMs to suggest concepts and datasets relevant to your input.
+Next, you'll associate these concepts with their own supporting and refuting child concepts with a set of drivers backed by index models. To help you find drivers and data, Causemos will use LLMs to suggest concepts and datasets relevant to your input.
 
 <p class="procedure">To create a new analysis graph</p>
 
-1. Click :fontawesome-solid-plus:{ aria-hidden="true"} **Create Index**.
-2. Rename the Overall priority node to align with your goal: 
+1. Click :fontawesome-solid-plus:{ aria-hidden="true"} **Create index model analysis**.
+2. Rename the overall priority node to align with your goal: 
     1. Hover over the node and click :fontawesome-solid-ellipsis-vertical:{ alt="Options" title="Options" } > :fontawesome-solid-pencil:{ aria-hidden="true" } **Rename**.
     2. Delete the existing text, enter `Priority Countries for Climate Support` and click **Done**.
 3. Click **Add input concept**, type `National Interest` in the text box, and press ++enter++.
 
     ??? tip "Suggested drivers"
 
-        When you choose to add an input concept, Causemos automatically suggests a list of concepts that drive the parent concept. You can click any of these suggestions to quickly add them to your graph. 
+        When you choose to add an input concept, Causemos automatically suggests a list of concepts that drive the parent concept. You can filter these suggestions by clicking :fontawesome-solid-earth-americas:{ aria-hidden="true"} **Add geographic context** and entering a region of interest. To add a suggestion to your graph, click it.
 
 4. Repeat step 3, this time naming the new node `Climate Risk`.
 5. Add the following concepts as inputs to the concepts added in the previous steps. After you type the name of each concept, select the corresponding dataset from the list of suggested datasets.
@@ -117,7 +117,7 @@ Next, you'll associate these concepts with their own supporting and refuting chi
 
 ## Rank regions according to the need for climate support
 
-When you've completed your graph, the weighted sum of the attached datasets flows up your index structure to determine a region ranking for your overall priority. You'll explore these rankings on a map and drill down into the index weights to understand why each country is ranked where it is.
+When you've completed your graph, the weighted sum of the attached datasets flows up your index structure to calculate region rankings for your overall priority. You'll explore these rankings on a map and drill down into the index weights to understand why each country is ranked where it is.
 
 ![](img/get-started/region-ranking.png)
 
@@ -151,7 +151,7 @@ Like you did in the ranking space, you'll save an insight here to serve as a ref
 
         You can only compare different scenarios when you are viewing projections for a single country. Scenario comparison is not available when viewing projections for multiple countries.
 
-4. Change the time range to cover the period you're interested in:
+4. Change the time range to cover the dates you're interested in:
     1. Click **Edit**.
     2. Change the **to** date to *December 2030*.
 3. To create a new scenario and compare it to the default with no constraints:

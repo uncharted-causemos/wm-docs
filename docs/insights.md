@@ -58,7 +58,7 @@ Each insight has a link back to the view in which you captured it. You can use t
 
     - Click :fontawesome-solid-info:{ alt="Toggle metadata" title="Toggle metadata"}.
 
-??? list "To access the Causemos view in which an insight was saved"
+??? list "To access the live source of an insight"
 
     - Click :fontawesome-solid-turn-up:{ alt="Jump to live context" title="Jump to live context"}.
 
@@ -125,14 +125,14 @@ You can export screenshots of your insights to a PowerPoint or Word document tha
 - The title and description of the insight.
 - The screenshot.
 - The date on which the insight was captured.
-- The name of the project the insight came from and the dates it was created and last modified.
-- A link back to the view the in which the insight was captured.
+- The name of the project the insight came from and the dates on which it was created and last modified.
+- A link back to the live view source of the insight.
 
 ??? list "To export an insight"
 
     - Click **PowerPoint** or **Word**.
 
-??? list "To export multiple insights"
+??? list "To export more than one insight"
 
     1. Select each of the insights you want to export. To export all insights, skip this step.
     2. In the upper right corner, click **PowerPoint** or **Word** to choose how you want to save and share the insights.

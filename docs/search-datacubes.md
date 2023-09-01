@@ -2,7 +2,7 @@
 title: "Search datacubes"
 ---
 
-When you want to attach a dataset to a concept and you're unable to find the right one in the automatic suggestions, you can perform an advanced search on all the available datasets. The advanced search opens the datacube explorer, which lets you:
+To attach a dataset to a concept when you can't find the right one in the automatic suggestions, you can perform an advanced search. The advanced search opens the datacube explorer, which lets you:
 
 - Search specific fields (such as country, domain, and time) in the datasets,
 - Filter the datasets based on common values in those fields, and
@@ -26,7 +26,7 @@ Using the datacube explorer, you can search, filter, and review the available da
     3. Press ++enter++ again to submit your search.
     4. Review the facets to see a breakdown of the datacubes that match your search.
         <figure>
-          <img src="/img/datacubes/facets.png">
+          <img src="../img/datacubes/facets.png">
           <figcaption>The number of datasets in the search results that match each value. For example, there are 2,014 datasets that cover Ethiopia. Of these, 165 match the current search results.<figcaption>
         </figure>
     5. To view more details about a datacube, click anywhere on its card in the search results.
@@ -35,7 +35,7 @@ Using the datacube explorer, you can search, filter, and review the available da
 
     - Click a value in the Facets. For example, if you only want to see datacubes that contain data for Kenya, click **Kenya** in the Country facet.
         <figure>
-          <img src="/img/datacubes/facets-badge.png">
+          <img src="../img/datacubes/facets-badge.png">
           <figcaption>Added filters appear in the search bar. Click **x** any time to clear them.<figcaption>
         </figure>
 

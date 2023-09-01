@@ -2,32 +2,39 @@
 title: "View projections"
 ---
 
-The Projections view allows you to understand recent and future trends in each of your model's datasets, concepts, and the overall priority. You can use it to compare countries or "what-if" scenarios.
+You can use the Projections view to understand recent and future trends in each of your model's datasets, concepts, and the overall priority. You can use it to compare countries or "what-if" scenarios.
 
 ![](img/projections/projections.png)
 
 ??? list "To open the projections"
 
-    * Click **See results** on the overall priority.
+    * Click **View projections**.
 
 ## Understand projections
 
-The projections for each concept are based on the datasets attached to them or their children.
+The projections for each concept draws on the datasets attached to them or their children.
 
 - Projections for datasets are extrapolated (estimated beyond the range of historical values) and interpolated (estimated to fill in the gaps between historical values). 
 - Projections for concepts without datasets are a weighted sum of their children.
 
 ??? info "How projections work in Causemos"
 
-    Causemos uses a [Holt-Winters seasonal method](https://otexts.com/fpp2/holt-winters.html) :octicons-link-external-16:{ title="External link" alt="External link" } to project datasets. This method looks at three components of the dataset's past behavior:
+    To project a dataset into the future, Causemos produces various estimates of three components of the dataset's past behavior:
     
-    + The **level** represents the dataset's average overall behavior over the whole time period.
-    + The **trend** represents the dataset's long-term change (increasing or decreasing) over time.
-    + The **seasonality** represents the dataset's repeating patterns that occur at regular intervals.
+    + **Level**: Average overall behavior over the whole time period.
+    + **Trend**: Long-term change (up or down) over time.
+    + **Seasonality**: Repeating patterns that occur at regular intervals.
     
-    The system produces one projection for each component of past behavior. The projection that appears on the concept is the one that best fits the past behavior of the dataset.
+    The system then uses these estimates in many different combinations to create thousands of projections. The projection that best fits the past behavior of the dataset appears on the concept card.
 
-Then legend below the projections shows whether the data comes directly from the dataset or is interpolated/extrapolated. It also indicates how to tell if the datasets are outdated or insufficient for accurate projections.
+    ### Learn more:
+
+    To calculate the thousands of candidate projections, Causemos uses both of the following methods:
+
+    - [Holt's linear trend method](https://otexts.com/fpp2/holt.html) :octicons-link-external-16:{ title="External link" alt="External link" }
+    - [Holt-Winters seasonal method](https://otexts.com/fpp2/holt-winters.html) :octicons-link-external-16:{ title="External link" alt="External link" }
+
+The legend below the projections shows whether the data comes directly from the dataset or is interpolated or extrapolated. Warnings on the dataset nodes indicate whether the datasets are outdated or insufficient for accurate projections.
 
 ![](img/projections/legend.png)
 
@@ -41,13 +48,13 @@ Then legend below the projections shows whether the data comes directly from the
 
 ### Normalization
 
-The y-axis for the projections is based on a normalization of the historical data for the concept, where 0 is the lowest value and 1 is the highest. 
+The y-axis for the projections is a normalization of the historical data for the concept, where 0 is the lowest value and 1 is the highest. 
 
 ![](img/projections/projection-bounds.png)
 
-In some instances, projections may be lower or higher than these historical minimums and maximums. In these cases, you can adjust the y-axis to show the full extent of the project data. Reference lines on the expanded projection timeseries show the minimum/maximum of the historical data.
+Projections may be lower or higher than the historical data. You can adjust the y-axis to show the full extent of the project data. Reference lines on the expanded projection timeseries show the highs and lows of the historical data.
 
-??? list "To show projections that are outside the historical minimum and maximum"
+??? list "To show projections that are outside the historical highs and lows"
 
     - Click **Show values outside the 0 to 1 range**.
 
@@ -55,7 +62,7 @@ In some instances, projections may be lower or higher than these historical mini
 
 ## Choose which countries to view
 
-You can view projections for a single country or compare projections for multiple countries.
+You can view projections for a single country or compare projections for more than one.
 
 ![](img/projections/projection-single-country.png)
 
@@ -66,12 +73,12 @@ You can view projections for a single country or compare projections for multipl
 ??? list "To choose which countries to view"
 
     1. Click **Settings** and choose *Single country* or *Multiple countries*.
-    2. Click **Country** or **Countries** choose the countries you want to view.
+    2. Use the **Country** or **Countries** dropdown to choose the countries you want to view.
     3. To add more countries to the *Multiple countries* view, click :fontawesome-solid-circle-plus:{ aria-hidden="true"} **Add country** and repeat the previous step.
 
 ## Change the time range
 
-You can change the time range displayed on all concept projections. The dates you can select are always at least 10 years before and 10 years after the earliest and latest dates across all the datasets in your model.
+You can change the time range displayed on all concept projections. The dates you can select are always at least 10 years before and 10 years after the earliest and most recent dates across all the datasets in your model.
 
 ??? list "To change the time range"
 
@@ -80,7 +87,7 @@ You can change the time range displayed on all concept projections. The dates yo
 
 ## Add a scenario
 
-Scenarios allow you to place constraints (or "clamps") on datasets or concepts to see how downstream projections would change under different conditions. Each scenario has an auto-assigned color so you can easily differentiate them in the projections.
+With scenarios, you can place constraints (or "clamps") on datasets or concepts to see how downstream projections would change under different conditions. Each scenario has an automatically assigned color so you can differentiate them in the projections.
 
 <figure markdown>
   ![](img/projections/scenario.png)

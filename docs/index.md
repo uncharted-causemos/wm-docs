@@ -20,12 +20,12 @@ As you use Causemos to build analysis graphs of complex systems, you can:
 Need help? Check out these topics:
 
 <div class="gridcards" markdown>
-[Get started](get-started/){ .md-button }
-[Create an analysis project](analysis-projects/){ .md-button }
+[Get started](get-started.md){ .md-button }
+[Create an analysis project](analysis-projects.md){ .md-button }
 
-[Build an index graph](index-graph/){ .md-button }
-[Rank regions](rank-regions/){ .md-button }
+[Build an index graph](index-graph.md){ .md-button }
+[Rank regions](rank-regions.md){ .md-button }
 
-[View projections](projections/){ .md-button }
-[Save and share insights](insights/){ .md-button }
+[View projections](projections.md){ .md-button }
+[Save and share insights](insights.md){ .md-button }
 </div>

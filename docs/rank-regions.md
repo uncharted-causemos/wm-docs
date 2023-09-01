@@ -12,7 +12,7 @@ Once you've finished building your index, you can see how the various datasets a
 
 ## Understand dataset weights
 
-Region rankings for your overall priority are based on a weighted sum of the concepts in your index. Each concept is a sum of its inputs, which are all weighed equally.
+Region rankings for your overall priority are a weighted sum of the concepts in your index. Each concept is a sum of its inputs, which are all weighed equally.
 
 <figure markdown>
   ![Simple index for climate support, weighing both national interest and climate risk](img/get-started/index-graph.png)
@@ -31,7 +31,7 @@ The region ranking page shows your graph structure and dataset weights in the In
 
 Each region rank is a weighted sum of the region's value in each dataset in your index. To enable comparisons across datasets, Causemos normalizes region values on a scale from 0&ndash;1, where 0 is low and 1 is high. The rank then is a sum of the products of the normalized values multiplied by their weights. 
 
-Some countries may not be ranked at all. Causemos does not rank countries if they don't appear in one or more of the datasets in your index structure.
+Some countries may not have rankings. Causemos doesn't rank countries if they don't appear in one or more of the datasets in your index structure.
 
 ??? list "To explore region rankings on the map"
 
@@ -48,17 +48,17 @@ Some countries may not be ranked at all. Causemos does not rank countries if the
 
 ??? list "To find that countries aren't ranked"
 
-    * Click **Review hidden countries** to see a list of a countries and which of your datasets don't include them.
+    * Click **Review hidden countries** to see a list of countries and which of your datasets don't include them.
 
 ### Region ranking example
 
-In a simple climate support index, Chad ranks first due to its high adaptive capacity and climate vulnerability.
+In a climate support index, the country of Chad ranks first due to its high adaptive capacity and climate vulnerability.
 
 ![](img/region-ranking/region-weights.png)
 
 Causemos determines its score (54.98) by:
 
-1. Multiplying the region's normalized value in each dataset by the dataset's weight:
+1. Multiplying the region's normalized value in each dataset by the dataset weight:
 
     | Dataset               | Normalized value | Dataset weight  | Weighted score |
     |-----------------------|-----------------:|----------------:|---------------:|
@@ -68,7 +68,7 @@ Causemos determines its score (54.98) by:
 
     ??? note "Rounding of normalized values"
 
-        The **Country's value** columns rounds the normalized values to two decimal places. For example, 0.9492 is displayed as 0.95. However in calculating each country's overall score, Causemos uses the precise, unrounded values.
+        The **Country's value** column rounds the normalized values to two decimal places. For example, 0.9492 is displayed as 0.95. However in calculating each country's overall score, Causemos uses the precise, unrounded values.
 
 2. Adding the weighted scores:
 
@@ -76,4 +76,4 @@ Causemos determines its score (54.98) by:
 
 3. Multiplying the summed score by 100: 
 
-    `0.5498 * 100 = 54.98`
+    `0.5498 x 100 = 54.98`
